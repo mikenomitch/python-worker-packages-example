@@ -1,4 +1,4 @@
-*Note: We just discovered a bug in package loading that causes this to fail - fix incoming, but will not work currently*
+*Note: We just discovered a bug in package loading that causes vendored package loading to fail - fix incoming! - Built-in packages work fine though.*
 
 # FastAPI + Jinja2 Example
 

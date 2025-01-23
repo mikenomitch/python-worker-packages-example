@@ -7,7 +7,6 @@ sys.path.append(str(Path(__file__).parent / "vendor"))
 
 import jinja2
 from fastapi import FastAPI, Request
-from pydantic import BaseModel
 
 environment = jinja2.Environment()
 template = environment.from_string("Hello, {{ name }}!")
