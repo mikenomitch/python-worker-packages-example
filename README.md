@@ -43,7 +43,10 @@ Lastly, add these packages to your source files at `src/vendor`. For any additio
 In your wrangler.toml, make the vendor directory available:
 
 ```toml
-rules = [{ type = "Data", globs = ["vendor/**"], fallthrough = true }]
+[[rules]]
+globs = ["vendor/**"]
+type = "Data"
+fallthrough = true
 ```
 
 Now, you can import that directory in Python and use packages:
