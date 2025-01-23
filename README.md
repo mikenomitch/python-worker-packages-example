@@ -1,3 +1,5 @@
+*Note: We just discovered a bug in package loading that causes this to fail - fix incoming, but will not work currently*
+
 # FastAPI + Jinja2 Example
 
 *Note: You must have Python Packages enabled on your account for built-in packages to work. Request Access to our Closed Beta using [This Form](https://forms.gle/FcjjhV3YtPyjRPaL8)*
