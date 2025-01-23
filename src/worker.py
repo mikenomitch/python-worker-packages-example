@@ -1,7 +1,5 @@
 # Add the vendored libraries to the path
 
-import markdown from "./foo.md";
-
 import sys
 from pathlib import Path
 
