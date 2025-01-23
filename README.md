@@ -1,5 +1,7 @@
 # FastAPI + Jinja2 Example
 
+*Note: You must have Python Packages enabled on your account for built-in packages to work. Request Access to our Closed Beta using [This Form](https://forms.gle/FcjjhV3YtPyjRPaL8)*
+
 This is an example of a Python Worker that uses a built-in package (FastAPI) with a vendored package (Jinja2).
 
 ## Adding Packages
@@ -25,7 +27,7 @@ Within our virtual environment, install the pyodide CLI:
 ```
 
 Next, add packages to your vendor.txt file. Here we'll add jinja2
-```requirements.txt
+```
 jinja2
 ```
 
@@ -42,7 +44,7 @@ In your wrangler.toml, make the vendor directory available:
 rules = [{ type = "Data", globs = ["vendor/**"], fallthrough = true }]
 ```
 
-Now, you can import that directory in Python and use packages
+Now, you can import that directory in Python and use packages:
 
 ```python
 # Add the vendored libraries to the path
@@ -54,3 +56,9 @@ import jinja2
 
 # ... etc ...
 ```
+
+### Developing and Deploying
+
+To develop your Worker, run `wrangler dev`.
+
+To deploy your Worker, run `wrangler deploy`.
