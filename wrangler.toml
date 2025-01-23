@@ -1,0 +1,10 @@
+name = "fastapi-worker"
+main = "src/worker.py"
+compatibility_flags = ["python_workers"]
+compatibility_date = "2025-01-23"
+
+[vars]
+MESSAGE = "My env var"
+
+# Adds vendored libraries
+rules = [{ type = "Data", globs = ["vendor/**"], fallthrough = true }]
