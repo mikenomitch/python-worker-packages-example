@@ -18,7 +18,7 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    message = "This is an example of FastAPI with Jinja2 - go to /hi/<name> to see a template rendered
+    message = "This is an example of FastAPI with Jinja2 - go to /hi/<name> to see a template rendered"
     return {"message": message}
 
 
