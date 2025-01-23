@@ -14,6 +14,8 @@ Vendored packages are added to your source files and need to be installed in a s
 
 First, install Python3.12 and pip for Python 3.12.
 
+*Currently, other versions of Python will not work - use 3.12!*
+
 Then create a virtual environment and activate it from your shell:
 ```console
 python3.12 -m venv .venv
