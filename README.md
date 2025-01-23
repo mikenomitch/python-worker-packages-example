@@ -12,25 +12,25 @@ Vendored packages are added to your source files and need to be installed in a s
 
 First, install Python3.12 and pip for Python 3.12.
 
-Then create a virtual environment and activate it:
-```
+Then create a virtual environment and activate it from your shell:
+```console
 python3.12 -m venv .venv
 source .venv/bin/activate
 ```
 
 Within our virtual environment, install the pyodide CLI:
-```
+```console
 .venv/bin/pip install pyodide-build
 .venv/bin/pyodide venv .venv-pyodide
 ```
 
 Next, add packages to your vendor.txt file. Here we'll add jinja2
-```
+```requirements.txt
 jinja2
 ```
 
 Lastly, add these packages to your source files at `src/vendor`. For any additional packages, re-run this command.
-```
+```console
 .venv-pyodide/bin/pip install -t src/vendor -r vendor.txt
 ```
 
@@ -38,13 +38,13 @@ Lastly, add these packages to your source files at `src/vendor`. For any additio
 
 In your wrangler.toml, make the vendor directory available:
 
-```
+```toml
 rules = [{ type = "Data", globs = ["vendor/**"], fallthrough = true }]
 ```
 
 Now, you can import that directory in Python and use packages
 
-```
+```python
 # Add the vendored libraries to the path
 import sys
 from pathlib import Path
