@@ -1,2 +1,2 @@
-python-multipart
+markupsafe
 jinja2

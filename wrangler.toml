@@ -6,5 +6,7 @@ compatibility_date = "2025-01-23"
 [vars]
 MESSAGE = "My env var"
 
-# Adds vendored libraries
-rules = [{ type = "Data", globs = ["vendor/**"], fallthrough = true }]
+[[rules]]
+globs = ["vendor/**"]
+type = "Data"
+fallthrough = true
