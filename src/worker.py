@@ -1,21 +1,18 @@
-# Add the vendored libraries to the path
-
-import sys
-from pathlib import Path
-
-sys.path.append(str(Path(__file__).parent / "vendor"))
-
 import jinja2
 from fastapi import FastAPI, Request
 
 environment = jinja2.Environment()
 template = environment.from_string("Hello, {{ name }}!")
 
+
 async def on_fetch(request, env):
     import asgi
+
     return await asgi.fetch(app, request, env)
 
+
 app = FastAPI()
+
 
 @app.get("/")
 async def root():

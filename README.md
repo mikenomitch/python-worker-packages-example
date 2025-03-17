@@ -1,5 +1,3 @@
-*Note: We just discovered a bug in package loading that causes vendored package loading to fail - fix incoming! - Built-in packages work fine though.*
-
 # FastAPI + Jinja2 Example
 
 *Note: You must have Python Packages enabled on your account for built-in packages to work. Request Access to our Closed Beta using [This Form](https://forms.gle/FcjjhV3YtPyjRPaL8)*
@@ -51,16 +49,10 @@ type = "Data"
 fallthrough = true
 ```
 
-Now, you can import that directory in Python and use packages:
+Now, you can import and use the packages:
 
 ```python
-# Add the vendored libraries to the path
-import sys
-from pathlib import Path
-sys.path.append(str(Path(__file__).parent / "vendor"))
-
 import jinja2
-
 # ... etc ...
 ```
 
