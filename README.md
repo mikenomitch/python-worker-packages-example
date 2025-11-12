@@ -4,6 +4,18 @@
 
 This is an example of a Python Worker that uses a built-in package (FastAPI) with a vendored package (Jinja2).
 
+## Additional examples
+
+The `examples/` directory contains more sample Workers that highlight common patterns:
+
+- **`examples/dynamic-opengraph/`** – Dynamically inject OpenGraph metadata into HTML responses.
+- **`examples/durable-objects-chat/`** – Build a chat room backed by Durable Objects and WebSockets.
+- **`examples/websocket-firehose/`** – Consume and proxy external WebSocket streams like the Bluesky firehose.
+- **`examples/pillow-image/`** – Generate social preview images on demand with the Pillow package.
+- **`examples/python-package-rpc/`** – Expose Python package functionality over RPC and call it from JavaScript.
+
+Use these examples alongside the main project to explore different Python Worker capabilities.
+
 ## Adding Packages
 
 Built-in packages can be selected from [this list](https://developers.cloudflare.com/workers/languages/python/packages/#supported-packages) and added to your `requirements.txt` file. These can be used with no other explicit install step.
